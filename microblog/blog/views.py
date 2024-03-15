@@ -1,14 +1,17 @@
 from django.shortcuts import render, redirect
 
 from .forms import CommentForm
-from .models import Post
+from .models import Post # データベースをインポート
 
-# Create your views here.
 def frontpage(request):
+    # Postデータベースのオブジェクトを全て取得する
     posts = Post.objects.all()
-    return render(request, "blog/frontpage.html", {"posts": posts})
+    
+    # frontpage.htmlをサーバーに返す
+    return render(request, "blog/frontpage.html", {"posts": posts}) # "posts"という名前でpostsのデータを渡す
 
 def post_detail(request, slug):
+    # Postデータベースのslugが引数のslugのやつと同じオブジェクトを取得する
     post = Post.objects.get(slug=slug)
 
     if request.method == "POST":

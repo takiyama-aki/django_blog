@@ -1,6 +1,8 @@
+# クラスとしてデータベースを作成する
+
 from django.db import models
 
-# Create your models here.
+# ブログの投稿内容データベース
 class Post(models.Model):
     title = models.CharField(max_length = 255)
     slug = models.SlugField()
