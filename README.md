@@ -12,19 +12,23 @@ webアプリケーションを作成する練習するため作成しました�
 
 `django-admin startproject [プロジェクト名]`
 
+
 - アプリケーション作成
 
 `python manage.py startapp [アプリケーション名]`
 
+
 - サーバー起動
 
 `python manage.py runserver`
+
 
 - データベース作成
 
 `python manage.py makemigrations`
 
 データベースとmodels.pyを連携する?
+
 
 - データベース連携
 
