@@ -9,21 +9,29 @@ webアプリケーションを作成する練習するため作成しました�
 
 ## メモ
 - プロジェクト作成
+
 `django-admin startproject [プロジェクト名]`
 
 - アプリケーション作成
+
 `python manage.py startapp [アプリケーション名]`
 
 - サーバー起動
+
 `python manage.py runserver`
 
 - データベース作成
+
 `python manage.py makemigrations`
+
 データベースとmodels.pyを連携する?
 
 - データベース連携
+
 `python manage.py migrate`
+
 データベースのデータを使えるようにする?
 
 - CSSフレームワーク BULMS
+
 使い方はその都度調べること
