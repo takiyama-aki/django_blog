@@ -22,6 +22,7 @@ def post_detail(request, slug):
             comment.post = post
             comment.save()
 
+            # どこにページ遷移するのか
             return redirect("post_detail", slug=post.slug)
         
     else:

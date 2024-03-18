@@ -1,3 +1,5 @@
+# djangoが用意したフォーム機能
+
 from django import forms
 from .models import Comment
 

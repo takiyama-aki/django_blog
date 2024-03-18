@@ -28,14 +28,14 @@ webアプリケーションを作成する練習するため作成しました�
 
 `python manage.py makemigrations`
 
-データベースとmodels.pyを連携する?
+modeols.pyに書いてあるデータベースを作成する?
   <br>
 　
 - データベース連携
 
 `python manage.py migrate`
 
-データベースのデータを使えるようにする?
+データベースとmodels.pyを連携する?
   <br>
 　
 - CSSフレームワーク BULMS
