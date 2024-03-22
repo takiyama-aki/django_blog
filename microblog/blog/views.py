@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .forms import CommentForm
+from .forms import CommentForm, NewPost
 from .models import Post # データベースをインポート
 
 def frontpage(request):
@@ -29,3 +29,11 @@ def post_detail(request, slug):
         form = CommentForm( )
 
     return render(request, "blog/post_detail.html", {"post": post, "form": form})
+
+def new_post(request):
+    
+    # Postデータベースのオブジェクトを全て取得する
+    posts = Post.objects.all()
+    
+    # frontpage.htmlをサーバーに返す
+    return render(request, "blog/frontpage.html", {"posts": posts}) # "posts"という名前でpostsのデータを渡す

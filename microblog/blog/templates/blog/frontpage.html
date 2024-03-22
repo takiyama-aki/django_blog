@@ -1,7 +1,9 @@
 <!-- ベースのデザインを継承 -->
 {% extends "blog/base.html" %}
-
 {% block content %}
+<div class="has-text-right">
+    <a href="/" class="button">投稿する</a>
+</div>
 {% for post in posts %}
 <div class="post block">
     <h2 class="subtitle">
