@@ -1,18 +1,18 @@
 <!-- ベースのデザインを継承 -->
 {% extends "blog/base.html" %}
 {% block content %}
-<div class="has-text-right">
-    <a href="/" class="button">投稿する</a>
-</div>
-{% for post in posts %}
-<div class="post block">
-    <h2 class="subtitle">
-        {{post.title}}
-    </h2>
-    <small>Posted at {{post.psted_date}}</small>
-    <p>{{post.intro}}</p>
-    <a href="{% url 'post_detail' post.slug %}">もっと読む</a>
-    <hr />
-</div>
-{% endfor %}
+    <div class="has-text-right">
+        <a href="{% url 'new_post' %}" class="button">投稿する</a>
+    </div>
+    {% for post in posts %}
+        <div class="post block">
+            <h2 class="subtitle">
+                {{post.title}}
+            </h2>
+            <small>Posted at {{post.psted_date}}</small>
+            <p>{{post.intro}}</p>
+            <a href="{% url 'post_detail' post.slug %}">もっと読む</a>
+            <hr />
+        </div>
+    {% endfor %}
 {% endblock %}
